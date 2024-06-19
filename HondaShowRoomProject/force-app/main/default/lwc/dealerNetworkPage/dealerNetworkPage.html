@@ -1,0 +1,63 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-13-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-13-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class = "Dealer-Section ">
+        <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_1-of-3">
+                <h2> Network </h2> 
+               </div>
+               <div class="slds-col slds-size_2-of-3 ">
+                   <span>Dealer Locator        | </span>sfdx
+                   <span>Part Locator      | </span>
+                   <span>Service Locator       | </span>
+                   <span>Become Dealer </span>
+                 </div>
+               </div>
+           <lightning-layout>
+                   <lightning-layout-item size="12"  padding="around-small" class="image-section">
+                       <img src={DImage}>
+         </lightning-layout-item> 
+         
+               </lightning-layout>
+   </div>
+          <div class="slds_demo"> 
+    <ul class="slds-list_horizontal">
+     <li>Home /</li>
+     <li>Network /</li>
+     <li>Dealer Locator</li>
+        </ul></div></div>
+   <div> 
+       <h3>Dealer Locator</h3>
+       <h4>To locate the Dealer closest to you, go to state then go to city and reach to your nearest Dealer.</h4>
+   </div>
+   <div class="combobox-section">
+    <lightning-combobox
+    name="state"
+    label="STATE"
+    value={statePicklist}
+    placeholder="Select"
+    options={StatePicklistValues}
+    onchange={handleChange} ></lightning-combobox>
+    <lightning-combobox
+    name="city"
+    label="CITY"
+    value={cityPicklist}
+    placeholder="Select"
+    options={CityPicklistValues}
+    onchange={handleChange1} ></lightning-combobox><br>
+    <lightning-button  label="Submit" title="Submit" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="destructive" label="Reset" title="Reset" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+</div>
+</template>
